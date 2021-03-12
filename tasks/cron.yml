@@ -2,5 +2,5 @@
   cron:
     user: ansible
     name: "ansible provision"
-    special_time: daily,reboot
+    special_time: daily
     job: "/usr/bin/ansible-pull -o --vault-password-file /root/.ansible-vault-password -U https://github.com/mnul/ansible-pull.git > /dev/null"
