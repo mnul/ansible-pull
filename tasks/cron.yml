@@ -1,6 +1,6 @@
-  - name: install cron job (ansible-pull)
-    ansible.builtin.cron:
-      user: ansible
-      name: "ansible provision"
-      special_time: daily,reboot
-      job: "/usr/bin/ansible-pull -o -U https://github.com/mnul/ansible-pull.git > /dev/null"
+- name: install cron job (ansible-pull)
+  ansible.builtin.cron:
+    user: ansible
+    name: "ansible provision"
+    special_time: daily,reboot
+    job: "/usr/bin/ansible-pull -o --vault-password-file /root/.ansible-vault-password -U https://github.com/mnul/ansible-pull.git > /dev/null"
