@@ -1,0 +1,18 @@
+- name: create ansible user
+  user:
+    name: ansible
+    system: yes
+- name: create manu user
+  user:
+    name: manu
+    password: $6$IgtlWC9SVA7.Vnl5$ilYdnsp8mRgm9jBULSjQLPwCqc3NMRcNYWls3HkPXrLr6OTZPCNilWpp/gpk3vyVH/n9SQO3qsVkOw5ij3obv1
+    append: yes
+    groups: sudo
+
+- name: copy sudoers_ansible
+  copy:
+    src: files/sudoers_ansible
+    dest: /etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0440
