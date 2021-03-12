@@ -3,3 +3,5 @@
     name:
       - tmux
       - htop
+      - netselect-apt
+      - netselect
