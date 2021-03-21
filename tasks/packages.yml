@@ -5,3 +5,4 @@
       - htop
       - netselect-apt
       - netselect
+      - sudo
