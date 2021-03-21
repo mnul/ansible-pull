@@ -7,3 +7,4 @@
   copy:
     src: files/.tmux.conf
     dest: /home/manu/.tmux.conf
+    owner: manu
