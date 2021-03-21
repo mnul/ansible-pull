@@ -1,0 +1,9 @@
+- name: copy tmux-config root
+  copy:
+    src: files/.tmux.conf
+    dest: /root/.tmux.conf
+
+- name: copy tmux-config manu
+  copy:
+    src: files/.tmux.conf
+    dest: /home/manu/.tmux.conf
