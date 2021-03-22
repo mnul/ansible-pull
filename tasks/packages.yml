@@ -3,5 +3,10 @@
     name:
       - tmux
       - htop
-      - netselect
       - sudo
+
+- name: Install Debian packages
+  apt:
+    name:
+      - netselect
+  when: ansible_distribution == "Debian"
