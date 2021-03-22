@@ -1,0 +1,12 @@
+#- name: create authorized_keys file for user ansible
+#  file:
+#    path: /home/ansiible/.ssh/authorized_keys
+#    user: ansible
+#    recurse: yes
+#
+- name: add ansible.pub to known hosts
+  authorized_key:
+    key: "{{ lookup('file', 'files/ansible.pub') }}"
+    user: ansible
+    state: present
+    manage_dir: yes
