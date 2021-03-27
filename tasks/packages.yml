@@ -4,6 +4,7 @@
       - tmux
       - htop
       - sudo
+      - xclip
 
 - name: Install Debian packages
   apt:
