@@ -5,9 +5,17 @@
       - htop
       - sudo
       - xclip
+      - curl
+      - cifs-utils
+      - nfs-common
+      - net-tools
+      - neofetch
+    state: present
+  when: ansible_os_fammily == "Debian"
 
 - name: Install Debian packages
   apt:
     name:
       - netselect
+    state: present
   when: ansible_distribution == "Debian"
