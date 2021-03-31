@@ -11,7 +11,7 @@
       - net-tools
       - neofetch
     state: present
-  when: ansible_os_fammily == "Debian"
+  when: ansible_distribution in ["Debian", "Ubuntu"]
 
 - name: Install Debian packages
   apt:
