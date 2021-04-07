@@ -1,0 +1,21 @@
+- name: Install packages
+  apt:
+    name:
+      - tmux
+      - htop
+      - sudo
+      - xclip
+      - curl
+      - cifs-utils
+      - nfs-common
+      - net-tools
+      - neofetch
+    state: present
+  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+
+- name: Install Debian packages
+  apt:
+    name:
+      - netselect
+    state: present
+  when: ansible_distribution == "Debian"
