@@ -10,6 +10,7 @@
       - nfs-common
       - net-tools
       - neofetch
+      - tree
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
