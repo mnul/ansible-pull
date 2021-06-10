@@ -12,6 +12,7 @@
       - neofetch
       - tree
       - gnupg2
+      - ncdu
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
