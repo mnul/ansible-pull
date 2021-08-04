@@ -2,11 +2,18 @@
   connection: local
   become: true
 
-  pre_tasks:
-    - name: update repositories
-      package:
-        update_cache: yes
+ pre_tasks:
+    - name: pre-run | update package cache (arch)
+      tags: always
+      pacman: update_cache=yes
       changed_when: False
+      when: ansible_distribution == "Archlinux"
+
+    - name: pre-run | update package cache (debian, etc)
+      tags: always
+      apt: update_cache=yes
+      changed_when: False
+      when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
   tasks:
     - include: tasks/users.yml
