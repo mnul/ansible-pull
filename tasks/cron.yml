@@ -2,5 +2,7 @@
   cron:
     user: ansible
     name: "ansible provision"
+    minute: "17"
     hour: "*/2"
     job: "/usr/bin/ansible-pull -o --vault-password-file /root/.ansible-vault-password -U https://github.com/mnul/ansible-pull.git > /dev/null"
+
