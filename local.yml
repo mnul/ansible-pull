@@ -17,7 +17,7 @@
 
   tasks:
     - include: tasks/users.yml
-    - include: tasks/cron.yml
     - include: tasks/packages_deb.yml
+    - include: tasks/cron.yml
     - include: tasks/settings.yml
     - include: tasks/ssh.yml
