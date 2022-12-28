@@ -28,7 +28,7 @@
 - name: Install ansible ppa
   ansible.builtin.apt_repository:
     repo: ppa:ansible/ansible
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
+  when: ansible_distribution in ["Ubuntu", "Pop!_OS"]
 
 - name: Install ansible
   apt:
@@ -36,4 +36,4 @@
       - ansible
     state: latest
     update_cache: yes
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian"]
+  when: ansible_distribution in ["Ubuntu", "Pop!_OS"]
