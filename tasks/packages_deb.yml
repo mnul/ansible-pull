@@ -21,22 +21,9 @@
     update_cache: yes
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian"]
 
-- name: Uninstall apt Ansible
-  apt:
-    name:
-      - ansible
-      - ansible-core
-    state: absent
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian"]
-
 - name: Install Debian packages
   apt:
     name:
       - netselect
     state: present
   when: ansible_distribution == "Debian"
-
-- name: Install Ansible using pip
-  pip:
-    name: ansible
-    state: latest
