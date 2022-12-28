@@ -30,3 +30,4 @@
 - name: Install Ansible using pip
   pip:
     name: ansible
+    state: latest
