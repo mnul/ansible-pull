@@ -19,7 +19,7 @@
       - python3-pip
     state: present
     update_cache: yes
-  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian"]
+  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
 - name: Install Debian packages
   apt:
