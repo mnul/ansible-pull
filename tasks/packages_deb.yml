@@ -1,3 +1,11 @@
+- name: Update all packages
+  apt:
+    upgrade: full
+    update_cache: yes
+    cache_valid_time: 3600
+  when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
+
+
 - name: Install packages
   apt:
     name:
@@ -18,7 +26,6 @@
       - python3
       - python3-pip
     state: present
-    update_cache: yes
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
 - name: Install Debian packages
