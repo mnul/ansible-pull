@@ -25,6 +25,7 @@
       - dnsutils
       - python3
       - python3-pip
+      - zsh
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
