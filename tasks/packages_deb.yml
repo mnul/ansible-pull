@@ -26,6 +26,7 @@
       - python3
       - python3-pip
       - zsh
+      - thefuck
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
