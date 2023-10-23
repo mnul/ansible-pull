@@ -27,6 +27,7 @@
       - python3-pip
       - zsh
       - thefuck
+      - fonts-powerline
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
