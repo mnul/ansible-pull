@@ -4,7 +4,7 @@
     name: "root ansible provision"
     minute: "17"
     hour: "*/2"
-    job: "/usr/local/bin/ansible-pull -o --vault-password-file /root/.ansible-vault-password -U https://github.com/mnul/ansible-pull.git > /dev/null"
+    job: "/usr/bin/ansible-pull -o --vault-password-file /root/.ansible-vault-password -U https://github.com/mnul/ansible-pull.git > /dev/null"
 
 - name: remove cron job for user ansible (ansible-pull)
   cron:
