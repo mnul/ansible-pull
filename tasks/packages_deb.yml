@@ -29,6 +29,7 @@
       - thefuck
       - fonts-powerline
       - fonts-firacode
+      - stow
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
