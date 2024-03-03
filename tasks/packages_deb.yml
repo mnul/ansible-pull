@@ -30,6 +30,7 @@
       - fonts-powerline
       - fonts-firacode
       - stow
+      - unattended-upgrades
     state: present
   when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS", "Raspbian", "Armbian"]
 
