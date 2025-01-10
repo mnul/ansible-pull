@@ -15,9 +15,9 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu", "Pop!_OS"]
 
-tasks:
-  - include_tasks: tasks/users.yml
-  - include_tasks: tasks/packages_deb.yml
-  - include_tasks: tasks/cron.yml
-  - include_tasks: tasks/settings.yml
-  - include_tasks: tasks/ssh.yml
+  tasks:
+    - include_tasks: tasks/users.yml
+    - include_tasks: tasks/packages_deb.yml
+    - include_tasks: tasks/cron.yml
+    - include_tasks: tasks/settings.yml
+    - include_tasks: tasks/ssh.yml
